@@ -15,6 +15,7 @@ WiFiUDP ntpUDP;
 NTPClient timeClient(ntpUDP, "pool.ntp.org", 0, 60000);
 
 void setup() {
+  esp_log_level_set("*", ESP_LOG_VERBOSE);
   Serial.begin(115200);
 
   WiFi.setAutoReconnect(false);
